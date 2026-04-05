@@ -84,6 +84,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Next">
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wtu-hW-JZL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTn-MW-ahG">
                                 <rect key="frame" x="74" y="561" width="246" height="38"/>
@@ -145,6 +148,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="BGN-Ar-oJh"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="IJ8-Af-y6h" id="fNq-nX-ZMo"/>
+                        <outlet property="passwordTextField" destination="aN0-ap-Pt2" id="3bn-Xa-PFy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +251,9 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Register">
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="registerPressed:" destination="EOL-vv-Fjm" eventType="touchUpInside" id="elT-Ph-j8w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-WS-bTQ">
                                 <rect key="frame" x="74" y="561" width="246" height="38"/>
@@ -289,6 +299,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PiF-c4-quw"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="lhl-gj-tbt" id="hFI-ji-AQD"/>
+                        <outlet property="passwordTextField" destination="cGT-0e-qOb" id="urG-KN-CY7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJO-M9-rnm" sceneMemberID="firstResponder"/>
             </objects>
