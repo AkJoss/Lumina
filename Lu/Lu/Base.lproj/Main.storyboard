@@ -344,7 +344,7 @@
         <!--Library-->
         <scene sceneID="E7K-SR-xdb">
             <objects>
-                <viewController id="v4t-Ym-r6t" sceneMemberID="viewController">
+                <viewController id="v4t-Ym-r6t" customClass="LibraryViewController" customModule="Lu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xan-4u-5r7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,7 +366,7 @@
         <!--Search-->
         <scene sceneID="DoC-C9-Xio">
             <objects>
-                <viewController id="uro-Mo-i7N" sceneMemberID="viewController">
+                <viewController id="uro-Mo-i7N" customClass="SearchViewController" customModule="Lu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tts-92-Jq7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
