@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IniciarSesionCrearCuentaFondoLumina" translatesAutoresizingMaskIntoConstraints="NO" id="bqh-nm-Vt5">
-                                <rect key="frame" x="0.0" y="-386" width="413" height="1266"/>
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="876"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign-In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncU-Rz-CRW">
@@ -85,7 +85,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Wtu-hW-JZL"/>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NMv-xI-LHN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTn-MW-ahG">
@@ -143,14 +143,31 @@
                                 <rect key="frame" x="82" y="563" width="26" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAs-7k-Blq">
+                                <rect key="frame" x="243" y="295" width="79" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-xP-fWi">
+                                <rect key="frame" x="153" y="359" width="79" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="BGN-Ar-oJh"/>
                     <connections>
-                        <outlet property="emailTextField" destination="IJ8-Af-y6h" id="fNq-nX-ZMo"/>
-                        <outlet property="passwordTextField" destination="aN0-ap-Pt2" id="3bn-Xa-PFy"/>
+                        <outlet property="emailErrorLabel" destination="fAs-7k-Blq" id="CqX-lN-iaP"/>
+                        <outlet property="emailTextField" destination="IJ8-Af-y6h" id="ReO-ct-I4F"/>
+                        <outlet property="passwordErrorLabel" destination="7Ot-xP-fWi" id="cDh-f2-rtC"/>
+                        <outlet property="passwordTextField" destination="aN0-ap-Pt2" id="3Y6-yg-C9H"/>
+                        <segue destination="VJr-tu-NFj" kind="show" identifier="toHome" id="XUt-NG-1gg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -184,7 +201,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IniciarSesionCrearCuentaFondoLumina" translatesAutoresizingMaskIntoConstraints="NO" id="LTY-2i-pKa">
-                                <rect key="frame" x="0.0" y="-386" width="413" height="1266"/>
+                                <rect key="frame" x="0.0" y="0.0" width="411" height="870"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign-Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnS-mF-WNO">
@@ -252,7 +269,7 @@
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="registerPressed:" destination="EOL-vv-Fjm" eventType="touchUpInside" id="elT-Ph-j8w"/>
+                                    <action selector="registerPressed:" destination="EOL-vv-Fjm" eventType="touchUpInside" id="Xbv-YH-5wE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncj-WS-bTQ">
@@ -294,28 +311,138 @@
                                 <rect key="frame" x="82" y="563" width="26" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGn-4F-Gqt">
+                                <rect key="frame" x="241" y="295" width="79" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ran" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jEN-Os-BUQ">
+                                <rect key="frame" x="157" y="359" width="110" height="11"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nOu-tv-hgy"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="PiF-c4-quw"/>
                     <connections>
-                        <outlet property="emailTextField" destination="lhl-gj-tbt" id="hFI-ji-AQD"/>
-                        <outlet property="passwordTextField" destination="cGT-0e-qOb" id="urG-KN-CY7"/>
+                        <outlet property="emailErrorLabel" destination="YGn-4F-Gqt" id="B2E-4h-s8T"/>
+                        <outlet property="emailTextField" destination="lhl-gj-tbt" id="0lZ-wT-gQv"/>
+                        <outlet property="passwordErrorLabel" destination="jEN-Os-BUQ" id="Ahn-A6-4lm"/>
+                        <outlet property="passwordTextField" destination="cGT-0e-qOb" id="RLz-Rj-tLj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oJO-M9-rnm" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="106"/>
+            <point key="canvasLocation" x="1756.4885496183206" y="105.63380281690141"/>
+        </scene>
+        <!--Library-->
+        <scene sceneID="E7K-SR-xdb">
+            <objects>
+                <viewController id="v4t-Ym-r6t" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xan-4u-5r7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FondoGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-Ui-i1I">
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="874"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oYK-0Q-Car"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" selectedImage="books.vertical" id="bWJ-SS-jaO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MCv-hQ-LDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3618" y="838"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="DoC-C9-Xio">
+            <objects>
+                <viewController id="uro-Mo-i7N" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tts-92-Jq7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FondoGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="qh2-0d-8tp">
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="874"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nuv-D0-tVe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="AnZ-Xa-owW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aD9-CZ-hPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3617.5572519083967" y="-594.36619718309862"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="qxC-Ys-2Wz">
+            <objects>
+                <tabBarController id="VJr-tu-NFj" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="12i-sp-Tbh"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oGp-51-Zak">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" red="0.38110354540000002" green="0.6254882812" blue="0.4851074219" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uro-Mo-i7N" kind="relationship" relationship="viewControllers" id="RnU-rZ-43E"/>
+                        <segue destination="TNm-tm-XFz" kind="relationship" relationship="viewControllers" id="uC1-Ag-axr"/>
+                        <segue destination="v4t-Ym-r6t" kind="relationship" relationship="viewControllers" id="XnV-5r-ak1"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sm-he-Qnp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2669" y="106"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="10j-1N-kRb">
+            <objects>
+                <viewController id="TNm-tm-XFz" customClass="HomeViewController" customModule="Lu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6pw-vj-SY3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FondoGeneral" translatesAutoresizingMaskIntoConstraints="NO" id="224-my-aUt">
+                                <rect key="frame" x="0.0" y="0.0" width="410" height="874"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zLE-si-Jbv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="WR4-2m-Euv"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anQ-Th-pBs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3617.5572519083967" y="105.63380281690141"/>
         </scene>
     </scenes>
     <resources>
         <image name="FacebookLogo" width="223" height="222"/>
+        <image name="FondoGeneral" width="402" height="874"/>
         <image name="GoogleLogo" width="480" height="480"/>
         <image name="IniciarSesionCrearCuentaFondoLumina" width="402" height="874"/>
         <image name="MicrosoftLogo" width="509" height="512"/>
+        <image name="books.vertical" catalog="system" width="128" height="107"/>
+        <image name="house" catalog="system" width="128" height="104"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.2196078431372549" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
