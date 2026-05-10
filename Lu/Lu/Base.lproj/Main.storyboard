@@ -341,26 +341,26 @@
             </objects>
             <point key="canvasLocation" x="1756.4885496183206" y="105.63380281690141"/>
         </scene>
-        <!--Library Nav-->
+        <!--Library-->
         <scene sceneID="Lib-Nvc-scene">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wQ9-Lib-Nvc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" selectedImage="books.vertical" id="bWJ-SS-jaO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Lib-navBar">
                         <rect key="frame" x="0.0" y="118" width="393" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <tabBarItem key="tabBarItem" title="Library" image="books.vertical" catalog="system" selectedImage="books.vertical" id="bWJ-SS-jaO"/>
                     <connections>
                         <segue destination="v4t-Ym-r6t" kind="relationship" relationship="rootViewController" id="zLib-root-nvc"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lib-Nvc-fr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3300" y="838"/>
+            <point key="canvasLocation" x="2668" y="858"/>
         </scene>
-        <!--Library-->
+        <!--Library View Controller-->
         <scene sceneID="E7K-SR-xdb">
             <objects>
                 <viewController id="v4t-Ym-r6t" customClass="LibraryViewController" customModule="Lu" customModuleProvider="target" sceneMemberID="viewController">
@@ -374,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MCv-hQ-LDv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3618" y="838"/>
+            <point key="canvasLocation" x="3618" y="858"/>
         </scene>
         <!--Search-->
         <scene sceneID="DoC-C9-Xio">
@@ -388,6 +388,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="410" height="874"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3tH-ku-uZf">
+                                <rect key="frame" x="0.0" y="172" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="uro-Mo-i7N" id="8Yw-Mz-bRE"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nuv-D0-tVe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -398,7 +408,7 @@
             </objects>
             <point key="canvasLocation" x="3617.5572519083967" y="-594.36619718309862"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="qxC-Ys-2Wz">
             <objects>
                 <tabBarController storyboardIdentifier="MainTabBar" id="VJr-tu-NFj" customClass="MainTabBarController" customModule="Lu" customModuleProvider="target" sceneMemberID="viewController">
