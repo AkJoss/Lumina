@@ -1,16 +1,14 @@
 //
-//  LibraryViewController.swift
+//  ArtistViewController.swift
 //  Lu
-//
-//  Created by José Alberto Rocha Munguía on 15/04/26.
 //
 
 import UIKit
 
-class LibraryViewController: UIViewController {
+final class ArtistViewController: UIViewController {
 
-    private let tracks = MusicCatalog.libraryTracks
-
+    private let artistName: String
+    private let tracks: [Track]
     private lazy var tableView: UITableView = {
         let t = UITableView(frame: .zero, style: .plain)
         t.backgroundColor = .clear
@@ -22,13 +20,20 @@ class LibraryViewController: UIViewController {
         return t
     }()
 
+    init(artistName: String, tracks: [Track]) {
+        self.artistName = artistName
+        self.tracks = tracks
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "Lúmina Home"
         view.backgroundColor = LuminaAppearance.background
-
-        view.subviews.compactMap { $0 as? UIImageView }.forEach { $0.removeFromSuperview() }
+        title = artistName
 
         view.addSubview(tableView)
         NSLayoutConstraint.activate([
@@ -41,15 +46,10 @@ class LibraryViewController: UIViewController {
         if let nav = navigationController {
             LuminaAppearance.applyDarkNavigationBar(nav.navigationBar)
         }
-        if let tab = tabBarController?.tabBar {
-            LuminaAppearance.applyDarkTabBar(tab)
-        }
-
-        print("Adri (Log): Home Screen Loaded")
     }
 }
 
-extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
+extension ArtistViewController: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         tracks.count
@@ -60,8 +60,8 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let track = tracks[indexPath.row]
-        cell.configure(track: track, artistTapDelegate: self)
-        cell.setArtistColorMuted(false)
+        cell.configure(track: track, artistTapDelegate: nil)
+        cell.setArtistColorMuted(true)
         return cell
     }
 
@@ -70,14 +70,5 @@ extension LibraryViewController: UITableViewDataSource, UITableViewDelegate {
         let track = tracks[indexPath.row]
         let playback = PlaybackViewController(initialTrack: track, playlist: tracks)
         navigationController?.pushViewController(playback, animated: true)
-    }
-}
-
-extension LibraryViewController: SongTableViewCellDelegate {
-
-    func songCell(_ cell: SongTableViewCell, didTapArtist track: Track) {
-        let sameArtist = tracks.filter { $0.artist == track.artist }
-        let artistVC = ArtistViewController(artistName: track.artist, tracks: sameArtist)
-        navigationController?.pushViewController(artistVC, animated: true)
     }
 }

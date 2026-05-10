@@ -63,7 +63,7 @@ class SignInViewController: UIViewController {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 
                 if let tabBarVC = storyboard.instantiateViewController(withIdentifier: "MainTabBar") as? UITabBarController {
-                    // Seleccionamos la pestaña de Biblioteca (índice 1)
+                    // Tras login: pestaña Home (0 = Search, 1 = Home, 2 = Library)
                     tabBarVC.selectedIndex = 1
                     
                     // Cambiamos la raíz de la app
@@ -87,11 +87,8 @@ class SignInViewController: UIViewController {
                 // 2. Atrapamos el Tab Bar Controller que está a punto de abrirse
                 if let tabBarController = segue.destination as? UITabBarController {
                     
-                    // 3. Cambiamos la pestaña activa.
-                    // Recuerda que en programación empezamos a contar desde 0:
-                    // 0 = Pestaña 1 (Home)
-                    // 1 = Pestaña 2 (Biblioteca)
-                    // 2 = Pestaña 3 (Búsqueda)
+                    // 3. Cambiamos la pestaña activa (índices desde 0):
+                    // 0 = Search, 1 = Home, 2 = Library (Biblioteca)
                     
                     tabBarController.selectedIndex = 1
                 }
